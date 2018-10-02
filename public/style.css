@@ -149,7 +149,7 @@ body {
 .header-text {
   font-family: Barlow;
   font-weight: 900;
-  font-size: 4.4rem;
+  font-size: 3.5rem;
   line-height: 1;
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -158,13 +158,13 @@ body {
 @media (max-width: 1199.98px) {
   .header-text {
     margin-top: 3rem;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 
 @media (max-width: 575.98px) {
   .header-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
