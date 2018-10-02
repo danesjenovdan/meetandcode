@@ -146,6 +146,12 @@ body {
 }
 
 /* other stuff */
+.disabled,
+[disabled] {
+  filter: grayscale(1);
+  pointer-events: none;
+}
+
 .header-text {
   font-family: Barlow;
   font-weight: 900;
