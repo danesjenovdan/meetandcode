@@ -125,22 +125,34 @@ body {
   fill: #fff !important;
 }
 
+.event-security .btn.bg-secondary:active,
+.event-security .btn.bg-secondary:focus,
 .event-security .btn.bg-secondary:hover {
   background-color: #e150ad !important;
 }
+.event-security .btn.text-primary:active,
+.event-security .btn.text-primary:focus,
 .event-security .btn.text-primary:hover {
   color: #f9d324 !important;
 }
+.event-security .btn:active .fill-primary,
+.event-security .btn:focus .fill-primary,
 .event-security .btn:hover .fill-primary {
   fill: #f9d324 !important;
 }
 
+.event-air .btn.bg-secondary:active,
+.event-air .btn.bg-secondary:focus,
 .event-air .btn.bg-secondary:hover {
   background-color: #88d3ce !important;
 }
+.event-air .btn.text-primary:active,
+.event-air .btn.text-primary:focus,
 .event-air .btn.text-primary:hover {
   color: #6e45e2 !important;
 }
+.event-air .btn:active .fill-primary,
+.event-air .btn:focus .fill-primary,
 .event-air .btn:hover .fill-primary {
   fill: #6e45e2 !important;
 }

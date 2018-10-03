@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const title = document.title;
+  const text = document.querySelector('head meta[name="description"]').content;
+  const eventDetails = document.querySelector('.js-event-details').innerHTML;
+
   document.querySelector('#signup-form').addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -14,6 +18,17 @@ document.addEventListener('DOMContentLoaded', () => {
       ['peticija', `meetandcode-${eventName}`],
       ['name', `${name} -- ${age}`],
       ['email', email],
+      ['subject', `Prijava na delavnico: ${title}`],
+      ['content', `
+        Živjo,<br>
+        <br>
+        potrjujemo tvojo prijavo na Meet and Code dogodek v izvedbi Danes je nov dan. Se vidimo kmalu!<br>
+        <br>
+        ${title}<br>
+        ${eventDetails}<br>
+        <br>
+        Ekipa Danes je nov dan<br>
+      `],
     ]
       .map(entry => `${entry[0]}=${encodeURIComponent(entry[1])}`)
       .join('&');
@@ -33,12 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
         button.textContent = 'Napaka :(';
       }
     };
-    xhr.open('GET', `https://api.djnd.si/sign/?${data}`, true);
-    xhr.send();
+    xhr.open('POST', 'https://api.djnd.si/sign-mail/', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.send(data);
   });
-
-  const title = document.title;
-  const text = document.querySelector('head meta[name="description"]').content;
 
   // social
   document.querySelector('.js-facebook').addEventListener('click', (event) => {
