@@ -8,4 +8,4 @@ resources:
 images:
   - name: delavnice
     newName: rg.fr-par.scw.cloud/djnd/delavnice
-    newTag: 'latest'
+    newTag: '90262037262a0fb0961a2f01943f4f9cd25bfba1'
